@@ -4,7 +4,7 @@ import Main from './Main'
 import NavBar from './NavBar'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Spinner} from 'react-bootstrap'
-
+//builded
 function App(props) {
     const [url, setUrl] = useState("https://geo.ipify.org/api/v1?apiKey=at_76ypd93M1LfDLfE6w7t4RIPoMt1I5");
     const [response, setResponse] = useState()
