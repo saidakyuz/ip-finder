@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import Main from './Main'
 import NavBar from './NavBar'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {Spinner} from 'react-bootstrap'
 
 function App(props) {
     const [url, setUrl] = useState("https://geo.ipify.org/api/v1?apiKey=at_76ypd93M1LfDLfE6w7t4RIPoMt1I5");
@@ -22,7 +23,7 @@ function App(props) {
     return (
         <div style={{display: "flex", flexDirection: "column", alignItems: "center", margin: "1em" }}>
             <NavBar />
-            {response ? <Main response={response} /> : <h3>Loading</h3>}
+            {response ? <Main response={response} /> : <h3> <Spinner animation="border" variant="light" /></h3>}
         </div>
     )
 }
